@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>АТЛАНТ — спортивная одежда</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">АТЛАНТ</div>
+    <div class="search">
+      <input id="searchInput" type="search" placeholder="Поиск товаров…" autocomplete="off">
+    </div>
+    <button id="cartBtn" class="cart-btn" type="button">Корзина <span id="cartCount" class="cart-count">0</span></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Одежда для тренировок</h1>
+    <p>Функционально. Удобно. Создано теми, кто тренируется.</p>
+  </section>
+
+  <section class="toolbar">
+    <div id="categoryPills" class="pills"></div>
+    <label class="sort">Сортировка
+      <select id="sortSelect">
+        <option value="popular">Сначала популярные</option>
+        <option value="price-asc">Дешевле</option>
+        <option value="price-desc">Дороже</option>
+        <option value="rating">По рейтингу</option>
+      </select>
+    </label>
+  </section>
+
+  <section id="grid" class="grid"></section>
+  <p id="emptyMsg" class="empty hidden">Ничего не найдено. Попробуйте другой запрос.</p>
+</main>
+
+<div id="overlay" class="overlay hidden"></div>
+
+<aside id="cartDrawer" class="drawer hidden" aria-label="Корзина">
+  <div class="drawer-head">
+    <h2>Корзина</h2>
+    <button id="cartClose" class="icon-btn" type="button" aria-label="Закрыть">✕</button>
+  </div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="drawer-foot">
+    <div class="total-row"><span>Итого</span><strong id="cartTotal">$0</strong></div>
+    <button id="checkoutBtn" class="primary" type="button">Оформить заказ</button>
+  </div>
+</aside>
+
+<aside id="checkoutPanel" class="drawer hidden" aria-label="Оформление заказа">
+  <div class="drawer-head">
+    <h2>Оформление заказа</h2>
+    <button id="checkoutClose" class="icon-btn" type="button" aria-label="Закрыть">✕</button>
+  </div>
+  <form id="checkoutForm" class="checkout-form">
+    <input name="name" placeholder="Имя" required>
+    <input name="phone" placeholder="Телефон" required>
+    <input name="address" placeholder="Адрес доставки" required>
+    <input name="comment" placeholder="Комментарий (необязательно)">
+    <div class="total-row"><span>К оплате</span><strong id="checkoutTotal">$0</strong></div>
+    <button class="primary" type="submit">Подтвердить заказ</button>
+    <p class="demo-note">Демо-магазин: оплата не списывается.</p>
+  </form>
+</aside>
+
+<section id="orderSuccess" class="success hidden">
+  <div class="success-card">
+    <div class="success-check">✓</div>
+    <h2>Заказ оформлен</h2>
+    <p>Номер заказа: <strong id="orderNumber"></strong></p>
+    <p class="muted">Мы свяжемся с вами для подтверждения.</p>
+    <button id="successClose" class="primary" type="button">Продолжить покупки</button>
+  </div>
+</section>
+
+<div id="toast" class="toast hidden"></div>
+
+<footer class="site-footer">
+  <p>© 2026 АТЛАНТ · Демо-проект портфолио</p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
