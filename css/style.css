@@ -32,7 +32,8 @@ body {
   max-width: 1200px; margin: 0 auto; padding: .9rem 1.25rem;
   display: flex; align-items: center; gap: 1rem;
 }
-.logo { font-weight: 800; letter-spacing: .28em; font-size: 1.05rem; }
+.logo { font-weight: 800; letter-spacing: .12em; font-size: 1.05rem; display: flex; align-items: center; gap: .6rem; }
+.logo-img { width: 42px; height: 42px; border-radius: 12px; object-fit: cover; }
 .search { flex: 1; max-width: 480px; margin: 0 auto; }
 .search input {
   width: 100%; padding: .65rem 1.1rem; border-radius: 999px;
