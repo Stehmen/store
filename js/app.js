@@ -5,7 +5,7 @@ const FALLBACK = { products: [
 
 const state = {
   products: [],
-  cart: JSON.parse(localStorage.getItem("buddyduckCart") || "{}"), // {id: qty}
+  cart: JSON.parse(localStorage.getItem("duckbroCart") || "{}"), // {id: qty}
   category: "all",
   query: "",
   sort: "popular"
@@ -90,7 +90,7 @@ $("sortSelect").addEventListener("change", (e) => {
 /* ---------- корзина ---------- */
 
 function saveCart() {
-  localStorage.setItem("buddyduckCart", JSON.stringify(state.cart));
+  localStorage.setItem("duckbroCart", JSON.stringify(state.cart));
 }
 
 function cartCount() {
@@ -185,7 +185,7 @@ $("checkoutClose").addEventListener("click", closeDrawers);
 
 $("checkoutForm").addEventListener("submit", (e) => {
   e.preventDefault();
-  const num = "BD-" + Math.floor(100000 + Math.random() * 900000);
+  const num = "DB-" + Math.floor(100000 + Math.random() * 900000);
   $("orderNumber").textContent = num;
   state.cart = {};
   saveCart();
